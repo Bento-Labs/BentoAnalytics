@@ -96,23 +96,23 @@ The APY is calculated using the formula:
 
 **Example**
     ```bash
-   rewardsTransfer = 500
-   totalAssets = 2 000 000
-   dailyRewards = 500 * 3 = 1500 ( 8 * 3 = 24 hours )
-   rewardsAnnualy = 1,500 × 365 = 547 500
-   scalling = 547 500 * 100 = 54 750 000
-   APY = 54 750 000 / 2 000 000 = 27.375%
+    rewardsTransfer = 500
+    totalAssets = 2 000 000
+    dailyRewards = 500 * 3 = 1500 ( 8 * 3 = 24 hours )
+    rewardsAnnualy = 1,500 × 365 = 547 500
+    scalling = 547 500 * 100 = 54 750 000
+    APY = 54 750 000 / 2 000 000 = 27.375%
 
 
 ## Initial timestamp/block
 
 - **timestamp**
    ```bash
-  spark: 1726628400
-  mountain: 1716552000
-  morphoUSDC: 1706140800
-  morphoUSDT: 1707523200
+   spark: 1726628400
+   mountain: 1716552000
+   morphoUSDC: 1706140800
+   morphoUSDT: 1707523200
 
 - **block**
    ```bash
-  ethena: 20206857
+   ethena: 20206857

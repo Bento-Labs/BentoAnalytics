@@ -31,9 +31,11 @@ Bento Analytics is a Node.js application that fetches APY data from various DeFi
    cd bento-server
 
 2. **Install Dependencies**
+   ```bash
    npm install
 
 3. **Create a .env file in the project root with:**
+   ```bash
    INFLUX_URL=http://localhost:8086
    INFLUX_TOKEN=your_influxdb_token
    INFLUX_ORG=your_influxdb_org
@@ -43,10 +45,11 @@ Bento Analytics is a Node.js application that fetches APY data from various DeFi
 ## Usage
 
 - **Start application**
+   ```bash
    npm start
 
 ## Project Structure
-    bento-server/
+    bentoAnalytics/
     ├── app.js                      # Main entry point and cron job scheduler
     ├── package.json                # Project configuration and dependencies
     ├── .env                        # Environment variables (not committed to source control)
@@ -67,22 +70,24 @@ Calls the contract’s ssr() function at that block (The per second Sky Savings 
 Formula for calculation: ( (ssr^SECONDS_PER_YEAR) - 1 ) * 100. 
 
 **Example:**
-ssr = 1.0000001
-SECONDS_PER_YEAR = 31536000
-Annual Growth Factor = 1.0000001^31536000
-Net Yield = 1.05 − 1 = 0.05
-APY = 0.05×100 = 5%.
+    ```bash
+    ssr = 1.0000001
+    SECONDS_PER_YEAR = 31536000
+    Annual Growth Factor = 1.0000001^31536000
+    Net Yield = 1.05 − 1 = 0.05
+    APY = 0.05×100 = 5%.
 
 ## Mountain
 Calcuation is based on rewardMultiplier() function, and computes the APY.
 Formula for calculation: ((currentMultiplier / previousMultiplier) - 1) * 100
 
 **Example:**
-previousMultiplier = 1.00 
-currentMultiplier = 1.047
-ratio = 1.047/1.00 = 1.047
-netGrowth = 1.047 − 1 = 0.047
-APY = 0.047 * 100 = 4.7%
+    ```bash
+    previousMultiplier = 1.00 
+    currentMultiplier = 1.047
+    ratio = 1.047/1.00 = 1.047
+    netGrowth = 1.047 − 1 = 0.047
+    APY = 0.047 * 100 = 4.7%
 
 ## Ethena
 Calculation is based on rewardsTransfer event which is send every 8 hours.
@@ -90,21 +95,24 @@ The APY is calculated using the formula:
 (rewardsTransfer * 3 * 365 * 100) / totalAssets
 
 **Example**
-rewardsTransfer = 500
-totalAssets = 2 000 000
-dailyRewards = 500 * 3 = 1500 ( 8 * 3 = 24 hours )
-rewardsAnnualy = 1,500 × 365 = 547 500
-scalling = 547 500 * 100 = 54 750 000
-APY = 54 750 000 / 2 000 000 = 27.375%
+    ```bash
+   rewardsTransfer = 500
+   totalAssets = 2 000 000
+   dailyRewards = 500 * 3 = 1500 ( 8 * 3 = 24 hours )
+   rewardsAnnualy = 1,500 × 365 = 547 500
+   scalling = 547 500 * 100 = 54 750 000
+   APY = 54 750 000 / 2 000 000 = 27.375%
 
 
 ## Initial timestamp/block
 
 - **timestamp**
+   ```bash
   spark: 1726628400
   mountain: 1716552000
   morphoUSDC: 1706140800
   morphoUSDT: 1707523200
 
 - **block**
+   ```bash
   ethena: 20206857

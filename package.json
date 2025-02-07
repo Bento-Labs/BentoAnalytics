@@ -1,0 +1,25 @@
+{
+  "name": "bento-server",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@graphprotocol/client-cli": "^3.0.7"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.12.4",
+    "@influxdata/influxdb-client": "^1.35.0",
+    "body-parser": "^1.20.3",
+    "cross-fetch": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "ethers": "^6.13.5",
+    "express": "^4.21.2",
+    "graphql": "^16.10.0",
+    "node-cron": "^3.0.3"
+  }
+}

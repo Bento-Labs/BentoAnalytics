@@ -69,7 +69,7 @@ Bento Analytics is a Node.js application that fetches APY data from various DeFi
 Calls the contract’s ssr() function at that block (The per second Sky Savings Rate (compounding rate)).
 Formula for calculation: ( (ssr^SECONDS_PER_YEAR) - 1 ) * 100. 
 
-**Example:**
+- **Example:**
     ```bash
     ssr = 1.0000001
     SECONDS_PER_YEAR = 31536000
@@ -81,7 +81,7 @@ Formula for calculation: ( (ssr^SECONDS_PER_YEAR) - 1 ) * 100.
 Calcuation is based on rewardMultiplier() function, and computes the APY.
 Formula for calculation: ((currentMultiplier / previousMultiplier) - 1) * 100
 
-**Example:**
+- **Example:**
     ```bash
     previousMultiplier = 1.00 
     currentMultiplier = 1.047
@@ -94,15 +94,14 @@ Calculation is based on rewardsTransfer event which is send every 8 hours.
 The APY is calculated using the formula:
 (rewardsTransfer * 3 * 365 * 100) / totalAssets
 
-**Example**
-    ```bash
-    rewardsTransfer = 500
-    totalAssets = 2 000 000
-    dailyRewards = 500 * 3 = 1500 ( 8 * 3 = 24 hours )
-    rewardsAnnualy = 1,500 × 365 = 547 500
-    scalling = 547 500 * 100 = 54 750 000
-    APY = 54 750 000 / 2 000 000 = 27.375%
-
+- **Example**
+  ```bash
+  rewardsTransfer = 500
+  totalAssets = 2 000 000
+  dailyRewards = 500 * 3 = 1500 ( 8 * 3 = 24 hours )
+  rewardsAnnualy = 1,500 × 365 = 547 500
+  scalling = 547 500 * 100 = 54 750 000
+  APY = 54 750 000 / 2 000 000 = 27.375%
 
 ## Initial timestamp/block
 

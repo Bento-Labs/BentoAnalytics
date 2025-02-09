@@ -37,7 +37,7 @@ cron.schedule("0 4,12,20 * * *", async () => {
 });
 
 // Run Mountain schedule everyday 1PM
-cron.schedule("0 13 * * *", async () => {
+cron.schedule("0 15 * * *", async () => {
   try {
     console.log("Mountain schedule triggered at:", new Date());
     await fetchMountainApy();
